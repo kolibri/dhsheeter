@@ -1,0 +1,83 @@
+---
+name: von Tapteldor
+pronouns: er/ihm
+level: 1
+ancestry: Ribbit
+community: Ordensgeborene
+template: bard
+subclass: Wortschmied
+attributes:
+  agility: 0
+  strength: 0
+  finesse: +1
+  instinct: +1
+  presence: +2
+  knowledge: -1
+evasion: 11
+armor: 3
+threshold_minor: 10
+threshold_major: 17
+hp: 5
+stress: 6
+hope: 3
+proficiency: 1
+experiences:
+  - name: "Fairer Kampf!"
+    mod: 2
+  - name: "Man kann das auch so sehen"
+    mod: 2
+cards:
+  - name: Bezaubern
+    domain: Anmut
+    type: Zauber
+    cost: 0
+    feature: Mache einen Zauberwirken-Wurf gegen ein Ziel in Naher Reichweite. Bei einem Erfolg wird es vorübergehend Bezaubert. Während es Bezaubert ist, ist die Aufmerksamkeit des Ziels auf dich fixiert, was sein Sichtfeld verengt und alle Geräusche außer deiner Stimme übertönt. Einmal pro Rast bei einem Erfolg kannst du einen Stress markieren, um das Bezauberte Ziel zu zwingen, ebenfalls einen Stress zu markieren.
+  - name: Inspirierende Worte
+    domain: Anmut
+    type: Zauber
+    cost: 1
+    feature: |
+        Deine Rede ist von Macht durchdrungen. Nach einer langen Rast platziere eine Anzahl von Marken auf diese Karte entsprechend deiner Präsenz. Wenn du mit einem Verbündeten sprichst, kannst du eine Marke von dieser Karte ausgeben, um ihm einen der folgenden Vorteile zu gewähren:
+        - Dein Verbündeter entfernt einen Stress.
+        - Dein Verbündeter heilt einen Trefferpunkt.
+        - Dein Verbündeter erhält eine Hoffnung.
+        Wenn du eine lange Rast einlegst, entferne alle nicht ausgegebenen Marken.
+active_weapons:
+  primary:
+    name: Rapier
+    trait_range: Presence / Melee
+    damage: W8 phy
+    burden: 1
+    feature: "Schnell: Wenn du einen Angriff machst, kannst du einen Stress markieren, um eine andere Kreatur in Reichweite anzuvisieren."
+  secondary:
+    name: Rundschild
+    trait_range: Finesse / Far
+    damage: W46+1 phy
+    burden: 1
+    feature: "Schützend: +1 auf Rüstungswert"
+active_armor:
+  name: Textilrüstung
+  base_thresholds: 5/11
+  base_score: 3
+  feature: "Flexibel: +1 auf Ausweichen"
+inventory:
+  - Seil 15m
+  - Notizbuch
+  - Kaputte Flöte
+inventory_weapons: []
+
+#ancestry: ""
+ancestry_feats:
+  - "Amphibisch: Du kannst unter Wasser atmen und dich natürlich bewegen."
+  - "Lange Zunge: Du kannst deine lange Zunge verwenden, um Dinge in Naher Reichweite zu greifen. Markiere einen Stress, um deine Zunge als Geschick-Nahwaffe zu verwenden, die W12 physischen Schaden mit deiner Übung verursacht."
+#community: ""
+community_feat: "Hingegeben: Notiere drei Sprüche oder Werte, die man dir in deiner Erziehung vermittelt hat. Einmal pro Rast, wenn du beschreibst, wie du eines dieser Prinzipien durch deine aktuelle Aktion verkörperst, kannst du einen W20 als deinen Hoffnungswürfel würfeln."
+subclass1: "Wortschmied"
+subclass1_specialization: 1
+subclass1_name: "Barde"
+subclass1_trait: "Presence"
+subclass1_feature: |
+  Mitreißende Rede: Einmal pro langer Rast kannst du eine herzliche, inspirierende Rede halten. Alle Verbündeten in Weiter Reichweite heilen 2 Stress.
+  Herz einer Poetin: Nachdem du einen Aktionswurf gemacht hast, um jemanden zu beeindrucken, zu überzeugen oder zu beleidigen, kannst du eine Hoffnung ausgeben, um einen W4 zum Wurf hinzuzufügen.
+
+gold: 20

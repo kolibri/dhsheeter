@@ -1,0 +1,217 @@
+---
+# At general:
+# This thing has a "Just shrink the text to fit in the box"-mechanic.
+# It has a miminum limit.
+# May be result in somewhat cases with long texts.
+#
+# Most fields are optional.
+#
+# Colons ":" are special in Yaml!
+# So we must mark lines with text like this:
+# -> feature: "Quick: When you make an attack..."
+# -> things:
+#      - "Quick: When you make an attack..."
+
+# Choose one of these templates. Case insensitiv:
+# Bard, Druid, Guardian, Ranger, Rouge, Seraph, Sorcerer, Warrior, Wizard
+#
+# It is just filling the sheet, field by field...
+# And just fill in, what you need. Should work.
+template: Wizard
+name: Tamara Tester
+pronouns: sie/ihr
+level: 10
+ancestry: Fungril-Kitari
+community: Loreborne
+subclass: School on Knowledge
+attributes:
+  agility: 0
+  strength: -1
+  finesse: 1
+  instinct: 1
+  presence: 0
+  knowledge: +2
+evasion: 11
+armor: 3
+threshold_minor: 10
+threshold_major: 17
+hp: 5
+stress: 6
+hope: 3
+proficiency: 6
+burden: 2
+gold: 713 # not yet supported
+experiences:
+  - name: "Wissen der Welt"
+    mod: 2
+  - name: "Naming things"
+    mod: 2
+  - name: "Mustererkennung"
+    mod: 2
+  - name: "Brettspiele"
+    mod: 2
+  - name: "Automatismen"
+    mod: 2
+
+active_weapons:
+  primary:
+    name: Rapier
+    trait_range: Presence / Melee
+    damage: d8 phy
+    burden: 1
+    feature: "Quick: When you make an attack, you can mark a Stress to target another creature within range."
+  secondary:
+    name: Hand Crossbow
+    trait_range: Finesse / Far
+    damage: d6+1 phy
+    burden: 1
+active_armor:
+  name: Gambison Armor
+  base_thresholds: 5/11
+  base_score: 3
+  feature: "Flexible: +1 to Evasion"
+inventory:
+  - Zeigegerät
+  - Notizbuch
+  - Kuschelkissen
+
+# There is place for 2 inventory weapons
+# hand is for primary or secondary weapon usage.
+#   as long "p" or "s" is the first letter, it will be recognized
+# burden can be max 2
+inventory_weapons:
+  - name: Rapier
+    trait_range: Presence / Melee
+    damage: d8 phy
+    burden: 2
+    hand: Primär
+    feature: "Quick: When you make an attack, you can mark a Stress to target another creature within range."
+  - name: Rapier
+    trait_range: Presence / Melee
+    damage: d8 phy
+    burden: 1
+    hand: s
+    feature: "Quick: When you make an attack, you can mark a Stress to target another creature within range."
+
+# There is place for 2 ancestry feats
+ancestry_feats:
+  - "Amphibious: You can breathe and move naturally underwater."
+  - "Long Tongue: You can use your long tongue to grab onto things within Close range. Mark a Stress to use your tongue as a Finesse Close weapon that deals d12 physical damage using your Proficiency."
+# Only one community feat:
+community_feat: "Dedicated: Record three sayings or values your upbringing instilled in you. Once per rest, when you describe how you’re embodying one of these principles through your current action, you can roll a d20 as your Hope Die."
+
+# There is place for 3 subclasses
+subclasses:
+  -
+    name: "Wordsmith"
+    specialization: 1
+    basename: "Bard"
+    trait: "Presence"
+    feature: |
+      Rousing Speech: Once per long rest, you can give a heartfelt, inspiring speech. All allies within Far range clear 2 Stress.
+  -
+    name: "Wordsmith"
+    specialization: 2
+    basename: "Bard"
+    trait: "Presence"
+    feature: |
+      Rousing Speech: Once per long rest
+      Heart of a Poet: After you make an action roll to impress, persuade, or offend someone, you can spend a Hope to add a d4 to the roll.
+  -
+    name: "Wordsmith"
+    specialization: 3
+    basename: "Bard"
+    trait: "Presence"
+    feature: |
+      Rousing Speech: Once per long rest, you can give a heartfelt, inspiring speech. All allies within Far range clear 2 Stress.
+      Heart of a Poet: After you make an action roll to impress, persuade, or offend someone, you can spend a Hope to add a d4 to the roll.
+
+# for the level markers on page 2
+# works like this:
+# each type of level up bonus has a name:
+# -> attr,hp,stress,exp,card,evasion, [subclass, prof, multiclass]
+# place the name as often as the bonus was choosen:
+# -> t2: [hp,hp,exp]
+# to add two hp and one experience bonus.
+levels:
+  t2: [attr,attr,attr,hp,hp,stress,stress,exp,card,evasion]
+  t3: [attr,attr,attr,hp,hp,stress,stress,exp,card,evasion,subclass,prof,prof,multiclass,multiclass]
+  t4: [attr,attr,attr,hp,hp,stress,stress,exp,card,evasion,subclass,prof,prof,multiclass,multiclass]
+
+# there is room for 15 cards
+cards:
+  - name: Card 01
+    domain: grace
+    type: ability
+    cost: 7
+    feature: Make a spellcast roll to check reality.
+  - name: Card 02
+    domain: grace
+    type: ability
+    cost: 7
+    feature: Make a spellcast roll to check reality.
+  - name: Card 03
+    domain: grace
+    type: ability
+    cost: 7
+    feature: Make a spellcast roll to check reality.
+  - name: Card 04
+    domain: grace
+    type: ability
+    cost: 7
+    feature: Make a spellcast roll to check reality.
+  - name: Card 05
+    domain: grace
+    type: ability
+    cost: 7
+    feature: Make a spellcast roll to check reality.
+  - name: Card 06
+    domain: grace
+    type: ability
+    cost: 7
+    feature: Make a spellcast roll to check reality.
+  - name: Card 07
+    domain: grace
+    type: ability
+    cost: 7
+    feature: Make a spellcast roll to check reality.
+  - name: Card 08
+    domain: grace
+    type: ability
+    cost: 7
+    feature: Make a spellcast roll to check reality.
+  - name: Card 09
+    domain: grace
+    type: ability
+    cost: 7
+    feature: Make a spellcast roll to check reality.
+  - name: Card 10
+    domain: grace
+    type: ability
+    cost: 7
+    feature: Make a spellcast roll to check reality.
+  - name: Card 11
+    domain: grace
+    type: ability
+    cost: 7
+    feature: Make a spellcast roll to check reality.
+  - name: Card 12
+    domain: grace
+    type: ability
+    cost: 7
+    feature: Make a spellcast roll to check reality.
+  - name: Card 13
+    domain: grace
+    type: ability
+    cost: 7
+    feature: Make a spellcast roll to check reality.
+  - name: Card 14
+    domain: grace
+    type: ability
+    cost: 7
+    feature: Make a spellcast roll to check reality.
+  - name: Card 15
+    domain: grace
+    type: ability
+    cost: 7
+    feature: Make a spellcast roll to check reality.
